@@ -1,0 +1,14 @@
+[
+    {
+        "id": "Kido_2025_NatCommun",
+        "author": "<strong>Kido, T.</strong>, Yotsumoto, Y., & Hayashi, M. J.",
+        "year": "2025",
+        "title": "Hierarchical representations of relative numerical magnitudes in the human frontoparietal cortex",
+        "container": "<span class='fst-italic'>Nature Communications, 16</span>(1), 419",
+        "doi": "https://doi.org/10.1038/s41467-024-55599-8",
+        "abstract": "The ability to estimate numerical magnitude is essential for decision-making and is thought to underlie arithmetic skills. In humans, neural populations in the frontoparietal regions are tuned to represent numerosity. However, it remains unclear whether their response properties are fixed to a specific numerosity (i.e., absolute code) or dynamically scaled according to the range of numerosities relevant to the context (i.e., relative code). Here, using functional magnetic resonance imaging combined with multivariate pattern analysis, we uncover evidence that representations of relative numerosity coding emerge gradually as visual information processing advances in the frontoparietal regions. In contrast, the early sensory areas predominantly exhibit absolute coding. These findings indicate a hierarchical organization of relative numerosity representations that adapt their response properties according to the context. Our results highlight the existence of a context-dependent optimization mechanism in numerosity representation, enabling the efficient processing of infinite magnitude information with finite neural resources.",
+        "isOpenAccess": true,
+        "isPeerReviewed": true,
+        "related": null
+    }
+]

@@ -1,0 +1,35 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const groupIdx = ["grants", "awards"];
+const _groups = (await getCollection("grantsAwards"))
+    .sort((a, b) => groupIdx.indexOf(a.id) - groupIdx.indexOf(b.id));
+const groups = [
+    { data: _groups[0], heading: "Grants" },
+    { data: _groups[1], heading: "Awards" },
+];
+---
+
+<Base>
+    {groups.map((group) => (
+        group.data.data.length > 0 ? (
+            <div class="grants-awards-group">
+                <h1>{group.heading}</h1>
+                {group.data.data.map((item) => (
+                    <div class="grants-awards-item pt-4">
+                        <div class="d-flex">
+                            <span class="lead me-3" id="year">{item.year}</span>
+                            <div>
+                                <span class="lead mb-0">{item.title}</span>
+                                <p class="mb-0">{item.description}</p>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        ) : (
+            null
+        )
+    ))}
+</Base>

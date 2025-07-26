@@ -1,0 +1,62 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const groupIdx = ["preprints", "publications", "published_preprints"];
+const _groups = (await getCollection("publications"))
+    .sort((a, b) => groupIdx.indexOf(a.id) - groupIdx.indexOf(b.id));
+const groups = [
+    { data: _groups[0], heading: "Preprints" },
+    { data: _groups[1], heading: "Publications" },
+    { data: _groups[2], heading: "Published preprints" },
+];
+---
+
+<Base>
+    {groups.map((group) => (
+        group.data.data.length > 0 ? (
+            <div class="publication-group">
+                <h1>{group.heading}</h1>
+                {group.data.data.map((item) => (
+                    <div class="publication-item pt-4" id={item.id}>
+                        <p class="citation lead" set:html={`${item.author} (${item.year}). ${item.title}. ${item.container}. <a class="link-external" href=${item.doi} target="_blank" rel="noopener noreferrer">${item.doi}</a>`}></p>
+
+                        <div class="row row-cols-auto gap-2 mb-2 ms-0 ms-md-2 ps-0 ps-md-2 align-items-center">
+                            {item.related ? (
+                                <a href={`#${item.related}`} class="btn btn-sm btn-secondary link-underline link-underline-opacity-0">
+                                    See published version
+                                    <i class="bi bi-link-45deg ms-1"></i>
+                                </a>
+                            ) : (
+                                null
+                            )}
+
+                            <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="collapse" data-bs-target={"#collapse"+item.id} aria-expanded="false" aria-controls={"collapse"+item.id}>
+                                Read abstract
+                                <i class="bi bi-chevron-down ms-1"></i>
+                            </button>
+
+                            {item.isOpenAccess ? (
+                                <span class="badge rounded-pill bg-info">open access</span>
+                            ) : (
+                                null
+                            )}
+
+                            {item.isPeerReviewed ? (
+                                <span class="badge rounded-pill bg-warning">peer-reviewed</span>
+                            ) : (
+                                null
+                            )}
+                        </div>
+
+                        <div class="collapse border-start border-light mb-0 ms-0 ms-md-4" id={"collapse"+item.id} aria-labelledby={"collapse"+item.id}>
+                            <p class="mb-0 ps-2" set:html={item.abstract}></p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        ) : (
+            null
+        )
+    ))}
+</Base>

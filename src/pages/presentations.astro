@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+
+const presentations = await getCollection("presentations");
+---
+
+<Base>
+    <div class="presentation-group">
+        <h1>Presentations</h1>
+        {presentations.map((item) => (
+            <div class="presentation-item pt-4" id={item.data.id}>
+                {item.data.lang === "en" ? (
+                    <p class="citation lead" set:html={`${item.data.author} (${item.data.year}). <em>${item.data.title}</em> [${item.data.description}]. ${item.data.conference}, ${item.data.place}.`}></p>
+                ) : (
+                    <p class="citation lead" set:html={`${item.data.author}（${item.data.year}）．${item.data.title}　${item.data.conference}${item.data.place ? (`（${item.data.place}）`) : ( `` )}．`}></p>
+                )}
+            </div>
+
+            <div class="row row-cols-auto gap-2 mb-2 ms-0 ms-md-2 ps-0 ps-md-2 align-items-center">
+                {item.data.abstract ? (
+                    <button type="button" class="btn btn-sm btn-secondary" data-bs-toggle="collapse" data-bs-target={`#collapse${item.data.id}`} aria-expanded="false" aria-controls={`collapse${item.data.id}`}>
+                        Read abstract
+                        <i class="bi bi-chevron-down ms-1"></i>
+                    </button>
+                ) : (
+                    null
+                )}
+
+                <span class="badge rounded-pill" class:list={ item.data.type === "talk" ? "bg-success" : "bg-info"}>
+                    {item.data.type}
+                </span>
+
+                {item.data.isAwarded ? (
+                    <span class="badge rounded-pill bg-warning">awarded</span>
+                ) : (
+                    null
+                )}
+            </div>
+
+            <>
+                {item.data.abstract ? (
+                    <div class="collapse border-start border-light mb-0 ms-0 ms-md-4" id={`collapse${item.data.id}`} aria-labelledby={`collapse${item.data.id}`}>
+                        <p class="mb-0 ps-2" set:html={item.data.abstract}></p>
+                    </div>
+                ) : (
+                    null
+                )}
+            </>
+        ))}
+    </div>
+</Base>

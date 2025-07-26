@@ -1,18 +1,50 @@
-import { glob } from "astro/loaders";
+import { file, glob } from "astro/loaders";
 import { defineCollection, z } from "astro:content";
 
-const blog = defineCollection({
-  // Load Markdown and MDX files in the `src/content/blog/` directory.
-  loader: glob({ base: "./src/content/blog", pattern: "**/*.{md,mdx}" }),
-  // Type-check frontmatter using a schema
-  schema: z.object({
-    title: z.string(),
-    description: z.string(),
-    // Transform string to Date object
-    pubDate: z.coerce.date(),
-    updatedDate: z.coerce.date().optional(),
-    heroImage: z.string().optional(),
-  }),
-});
+const publications = defineCollection({
+  loader: glob({ base: "src/data/publications/", pattern: "*.json" }),
+  schema: z.array(
+    z.object({
+      id: z.string(),
+      author: z.string(),
+      year: z.string(),
+      title: z.string(),
+      container: z.string(),
+      doi: z.string(),
+      abstract: z.string(),
+      isOpenAccess: z.boolean(),
+      isPeerReviewed: z.boolean(),
+      related: z.string().nullable()
+    })
+  )
+})
 
-export const collections = { blog };
+const presentations = defineCollection({
+  loader: file("src/data/presentations.json"),
+  schema: z.object({
+    id: z.string(),
+    author: z.string(),
+    year: z.string(),
+    title: z.string(),
+    conference: z.string(),
+    place: z.string().nullable(),
+    abstract: z.string().nullable(),
+    type: z.enum(["talk", "poster"]),
+    description: z.string(),
+    isAwarded: z.boolean(),
+    lang: z.enum(["en", "jp"])
+  })
+})
+
+const grantsAwards = defineCollection({
+  loader: glob({ base: "src/data/grants-awards", pattern: "*.json" }),
+  schema: z.array(
+    z.object({
+      year: z.string(),
+      title: z.string(),
+      description: z.string().nullable()
+    })
+  )
+})
+
+export const collections = { publications, presentations, grantsAwards };
