@@ -1,5 +1,18 @@
 [
     {
+        "id": "LaBonte-Clark_2025_VSS",
+        "author": "LaBonte-Clark, T., <strong>Kido, T.</strong>, Censor, N., Watanabe, T., & Sasaki, Y.",
+        "year": "2025",
+        "title": "Role of Sleep in Generalization and Specificity of Visual Perceptual Learning",
+        "conference": "Vision Science Society, 25th Annual Meeting",
+        "place": "St. Pete Beach, FL, USA",
+        "abstract": "Sleep is instrumental for various types of procedural learning, including improvement on basic visual tasks, referred to as visual perceptual learning (VPL). Sleep after training on VPL tasks leads to further improvement, referred to as off-line performance gains. Given that VPL is often specific to the trained location, previous research primarily focused on off-line performance gains at the trained location. However, it remains unclear whether off-line performance gains occur at untrained locations — in other words, whether sleep contributes to location transfer in VPL. Here, we show the tendency that off-line performance gains occur at both trained and untrained locations. In our experiment, both groups underwent training and two posttests, one immediately after training and one 12 hours later. The wake group trained in the morning and retested that evening, while the sleep group trained in the evening and retested the following morning. Only participants in the sleep group slept between posttests. Both groups followed otherwise identical procedures; participants were trained to detect an orientation presented in one upper quadrant of the visual field and were tested at both the trained and untrained upper quadrants. The sleep group exhibited off-line performance gains at both the trained and untrained locations, indicating location transfer. Conversely, the wake group does not show a clear pattern of location transfer at this stage of data collection, supporting the hypothesis that location transfer occurs only in the sleep group. Our results suggest that sleep may facilitate location transfer of VPL in an orientation detection task, generalizing learning to untrained locations. Interestingly, previous research reported no off-line transfer of learning to untrained orientations in a similar detection task (Tamaki et al., 2020, Nature Neuroscience). Comparing our findings with prior work highlights the possibility that distinct mechanisms underlie specificity and generalization of VPL for features and locations.",
+        "type": "poster",
+        "description": "Poster presentation",
+        "isAwarded": false,
+        "lang": "en"
+    },
+    {
         "id": "Kido_2024_VSJ",
         "author": "<strong>木戸 照明</strong>・Amirmahmoud Houshmand Chatroudi・四本 裕子",
         "year": "2024",
