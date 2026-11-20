@@ -7,9 +7,8 @@ import cloudflare from "@astrojs/cloudflare";
 export default defineConfig({
   site: "https://website.teruaki-kido.workers.dev",
   integrations: [sitemap()],
+  session: false,
   adapter: cloudflare({
-    platformProxy: {
-      enabled: true,
-    },
+    imageService: "passthrough",
   }),
 });

@@ -14,15 +14,15 @@
     "publish": true
   },
   "dependencies": {
-    "@astrojs/cloudflare": "12.6.0",
-    "@astrojs/mdx": "4.3.0",
-    "@astrojs/rss": "4.0.11",
-    "@astrojs/sitemap": "3.4.1",
-    "astro": "5.10.1",
-    "typescript": "5.8.3"
+    "@astrojs/cloudflare": "14.4.9",
+    "@astrojs/mdx": "8.1.6",
+    "@astrojs/rss": "4.0.19",
+    "@astrojs/sitemap": "3.7.6",
+    "astro": "7.4.13",
+    "typescript": "5.9.3"
   },
   "devDependencies": {
-    "wrangler": "4.21.x"
+    "wrangler": "4.165.x"
   },
   "scripts": {
     "astro": "astro",
