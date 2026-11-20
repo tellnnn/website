@@ -1,5 +1,31 @@
 [
     {
+        "id": "LaBonte-Clark_2026_SLEEP",
+        "author": "LaBonte-Clark, T., <strong>Kido, T.</strong>, Watanabe, T., & Sasaki, Y.",
+        "year": "2026, June 14-17",
+        "title": "fMRI Decoding During Sleep Reveals Contributions of NREM Reactivation to the Specificity of Learning",
+        "conference": "SLEEP 2026, 40th Annual Meeting of the APSS",
+        "place": "Baltimore, MD, USA",
+        "abstract": "Learning in a variety of tasks is known to be enhanced by post-training sleep, but the underlying neural mechanisms remain unclear. One leading hypothesis is that the re-emergence of training-related neural activity during sleep, known as reactivation, is essential for sleep-dependent learning. According to this hypothesis, task improvement should reflect reactivated representations, and learning should not generalize to representations that are not reactivated. Here, we tested a novel model proposing that the specificity of neural reactivation reflects the specificity of learning. In the experiment, participants were trained to detect a Gabor patch with a single orientation. During a post-training nap session, we recorded fMRI activity from early visual areas simultaneously with polysomnography to determine sleep stages. We applied a previously constructed fMRI decoder capable of classifying four Gabor orientations, including the trained orientation, to the fMRI data collected during sleep. In the event that learning occurred, the decoder classified the neural activity observed during NREM sleep as similar to the trained orientation above chance, suggesting selective reactivation of the trained orientation during sleep. Furthermore, higher levels of classification of the trained orientation appeared to accompany greater performance improvement after sleep for the trained orientation only. This pattern suggests that neural reactivation in visual cortex during NREM sleep reflects the trained stimuli, and it supports the proposal that reactivation plays a key role in mediating the specificity of learning.",
+        "type": "poster",
+        "description": "Poster presentation",
+        "isAwarded": false,
+        "lang": "en"
+    },
+    {
+        "id": "Kido_2026_VSS",
+        "author": "<strong>Kido, T.</strong>, Sasaki, Y., Censor, N., & Watanabe, T.",
+        "year": "2026, May 15-19",
+        "title": "Toward a More Accurate Estimation of Perceptual Learning Magnitude in the Texture Discrimination Task",
+        "conference": "Vision Science Society, 26th Annual Meeting",
+        "place": "St. Pete Beach, FL, USA",
+        "abstract": "Perceptual learning has traditionally been induced and studied through repetitive practice. The texture-discrimination task (TDT; Karni & Sagi, 1991) is a standard training paradigm for perceptual learning research, yet several procedural and analytical aspects may limit the accuracy with which learning magnitude is estimated. Here, we examined methodological factors that may have influenced earlier findings and propose modifications to improve the reliability of TDT-based learning measures. Specifically, we evaluated three potential issues: (1) imperfect gaze control, (2) task complexity during the response phase, and (3) analyses potentially prone to bias, which could lead to undesirable gaze strategies, non-perceptual improvements, or estimation bias in task performance. First, we investigated how the lapse rate might affect performance measures. Specifically, we simulated data computationally while varying the underlying lapse rate, then compared the performance estimates from different lapse-rate modeling approaches. We found that conventional approaches could significantly overestimate performance at relatively high lapse rates, which may occur in the TDT due to its dual-task nature. Next, we conducted a single-session behavioral experiment with the TDT to test procedural and analytical modifications. We monitored gaze, preventing its deviations in real time, and simplified the response procedure. To reduce bias, we added catch trials with long stimulus-to-mask onset asynchronies and used a bias-robust model (Prins, 2012). When data and analysis aligned with those of previous studies, the estimated task performance was consistent with that in the preceding studies, confirming task compatibility despite the procedural modifications. However, with catch trials and the bias-robust method, performance appeared worse than in earlier findings, suggesting overestimation in those studies. Together, these findings underscore the importance of improved data modeling and procedural control. Implementing the proposed modifications may enable more accurate estimation of perceptual learning magnitude in TDT-based experiments.",
+        "type": "poster",
+        "description": "Poster presentation",
+        "isAwarded": false,
+        "lang": "en"
+    },
+    {
         "id": "LaBonte-Clark_2025_VSS",
         "author": "LaBonte-Clark, T., <strong>Kido, T.</strong>, Censor, N., Watanabe, T., & Sasaki, Y.",
         "year": "2025",
