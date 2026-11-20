@@ -1,8 +1,13 @@
 ---
 import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
+import presentationsJson from "../data/presentations.json";
 
-const presentations = await getCollection("presentations");
+// getCollection() does not guarantee order; sort to match the JSON file
+const order = new Map(presentationsJson.map((p, i) => [p.id, i]));
+const presentations = (await getCollection("presentations")).sort(
+    (a, b) => (order.get(a.id) ?? Infinity) - (order.get(b.id) ?? Infinity)
+);
 ---
 
 <Base>
